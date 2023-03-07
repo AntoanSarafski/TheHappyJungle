@@ -26,7 +26,7 @@ namespace TheHappyJungle.Factories
                     return new Seeds(quantity);
 
                 default:
-                    throw new ArgumentException("Invalid type of food")
+                    throw new ArgumentException("Invalid type of food");
             }
         }
     }
