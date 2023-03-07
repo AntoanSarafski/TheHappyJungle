@@ -36,6 +36,8 @@ namespace TheHappyJungle.Models
             Weight += food.Quantity * WeightMultiplier;
         }
 
-        
+        public override string ToString()
+            => $"{GetType().Name} [{Name}, ";
+
     }
 }

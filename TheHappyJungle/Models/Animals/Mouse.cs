@@ -9,7 +9,7 @@ namespace TheHappyJungle.Models.Animals
     {
         protected const double MouseWeightMultiplier = 0.10;
 
-        public Mouse(string name, double weight, string livingRegion) 
+        public Mouse(string name, double weight, string livingRegion)
             : base(name, weight, livingRegion)
         {
         }
@@ -24,5 +24,8 @@ namespace TheHappyJungle.Models.Animals
 
         public override string ProduceSound()
             => $"Squeak";
+
+        public override string ToString()
+                => $"{base.ToString()}{Weight}, {LivingRegion}, {FoodEaten}]";
     }
 }

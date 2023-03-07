@@ -21,5 +21,8 @@ namespace TheHappyJungle.Models.Animals
 
         public override string ProduceSound()
             => $"Woof!";
+
+        public override string ToString()
+                => $"{base.ToString()}{Weight}, {LivingRegion}, {FoodEaten}]";
     }
 }
