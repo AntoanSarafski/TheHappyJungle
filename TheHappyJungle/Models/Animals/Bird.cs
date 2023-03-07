@@ -5,8 +5,13 @@ using TheHappyJungle.Models.Interfaces;
 
 namespace TheHappyJungle.Models.Animals
 {
-    abstract class Bird : IBird
+    abstract class Bird : Animal, IBird
     {
+        protected Bird(string name, double weight, double wingSize)
+            :base(name, weight)
+        {
+            WingSize = wingSize;
+        }
         public double WingSize { get; private set; }
     }
 }

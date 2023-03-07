@@ -5,9 +5,14 @@ using TheHappyJungle.Models.Interfaces;
 
 namespace TheHappyJungle.Models.Animals
 {
-    abstract class Mammal : IMammal
+    public abstract class Mammal : Animal, IMammal
     {
-        public string LivingRegion { get; private set; }
+        protected Mammal(string name, double weight, string livingRegion) 
+            : base(name, weight)
+        {
+            LivingRegion = livingRegion;
+        }
 
+        public string LivingRegion { get; private set; }
     }
 }

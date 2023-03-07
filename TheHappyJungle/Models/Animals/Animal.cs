@@ -6,7 +6,7 @@ using TheHappyJungle.Models.Interfaces;
 
 namespace TheHappyJungle.Models
 {
-    abstract class Animal : IAnimal
+    public abstract class Animal : IAnimal
     {
         protected Animal(string name, double weight)
         {
