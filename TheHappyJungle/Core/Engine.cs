@@ -4,6 +4,7 @@ using System.Text;
 using TheHappyJungle.Core.Interfaces;
 using TheHappyJungle.Factories.Interfaces;
 using TheHappyJungle.IO.Interfaces;
+using TheHappyJungle.Models.Interfaces;
 
 namespace TheHappyJungle.Core
 {
@@ -28,5 +29,22 @@ namespace TheHappyJungle.Core
         {
 
         }
+
+        private IAnimal CreateAnimal(string command)
+        {
+            string[] animalTokens = command.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            return animalFactory.CreateAnimal(animalTokens);
+        }
+
+        private IFood CreateFood()
+        {
+            string[] foodTokens = reader.ReadLine()
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            string foodType = foodTokens[0];
+            int foodQuantity = int.Parse(foodTokens[1]);
+
+            return foodFactory.CreateFood(foodType, foodQuantity);
+        } 
     }
 }
