@@ -5,7 +5,7 @@ using TheHappyJungle.Models.Interfaces;
 
 namespace TheHappyJungle.Models.Animals
 {
-    abstract class Bird : Animal, IBird
+    public abstract class Bird : Animal, IBird
     {
         protected Bird(string name, double weight, double wingSize)
             :base(name, weight)
